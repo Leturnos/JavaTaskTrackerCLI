@@ -1,6 +1,6 @@
 # 📖 Sobre o Projeto
 
-**Task Tracker CLI** é um gerenciador de tarefas simples e eficiente, operado via linha de comando. Este projeto foi desenvolvido como um desafio de programação para praticar habilidades backend da plataforma roadmap.sh, incluindo manipulação de arquivos (I/O), tratamento de entradas do usuário e a criação de uma aplicação de console interativa.
+**Task Tracker CLI** é um gerenciador de tarefas simples e eficiente, operado via linha de comando. Este projeto foi desenvolvido como um desafio de programação para praticar habilidades backend da plataforma [roadmap.sh](https://roadmap.sh/projects/task-tracker), incluindo manipulação de arquivos (I/O), tratamento de entradas do usuário e a criação de uma aplicação de console interativa.
 
 A aplicação permite que o usuário adicione, atualize, delete e liste suas tarefas, salvando todos os dados localmente em um arquivo de texto com formato similar a JSON.
 
