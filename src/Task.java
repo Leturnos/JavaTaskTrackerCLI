@@ -9,7 +9,7 @@ public class Task {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+    public static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
     public Task(String description, String status) {
         this.id = ++contId;
@@ -19,15 +19,27 @@ public class Task {
         this.updatedAt = LocalDateTime.now();
     }
 
+    public Task(long id, String description, Status status, LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this.id = id;
+        this.description = description;
+        this.status = status;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public static void initializeIdCounter(long maxId) {
+        contId = (int) maxId;
+    }
+
     @Override
     public String toString() {
         return "{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                ", status=" + status +
-                ", createdAt=" + createdAt.format(formatter) +
-                ", updatedAt=" + updatedAt.format(formatter) +
-                '}';
+                "\"id\": " + id + "," +
+                "\"description\": \"" + description + "\"," +
+                "\"status\": \"" + status + "\"," +
+                "\"createdAt\": \"" + createdAt.format(formatter) + "\"," +
+                "\"updatedAt\": \"" + updatedAt.format(formatter) + "\"" +
+                "}";
     }
 
     public long getId() {
